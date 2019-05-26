@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../scss/button.scss"],"names":[],"mappings":"AAAA,QACE,MAAA","sourcesContent":[".button {\n  color: blue;\n}\n"]}

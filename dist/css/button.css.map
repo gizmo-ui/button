@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../scss/button.scss","button.css"],"names":[],"mappings":"AAAA;EACE,WAAW;ACCb","file":"button.css","sourcesContent":[".button {\n  color: blue;\n}\n",".button {\n  color: blue;\n}\n\n/*# sourceMappingURL=button.css.map */"]}
