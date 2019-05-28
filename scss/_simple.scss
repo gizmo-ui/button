@@ -1,3 +1,28 @@
-button {
-  color: $red;
+.button {
+  font-size: $size-8;
+  padding: 0.625rem 1rem;
+  color: $white;
+  text-align: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1rem;
+  border-width: 0;
+  background-color: $blue;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  @each $color, $value in $colors {
+    &.-#{$color} {
+      background-color: $value;
+
+      &.-outline {
+        border-color: $value;
+        color: $value;
+        background-color: transparent;
+      }
+    }
+  }
 }

@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/gismokit/button.git"
   },
-  "author": [
+  "authors": [
     {
       "name": "Jalal Azimi",
       "email": "jalalazimi@gmail.com"
