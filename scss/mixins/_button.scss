@@ -22,7 +22,7 @@
 
         &.-gradient {
           @include border-gradient(1px, to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
-          
+
           &:hover {
             @include border-gradient(1px, to left, lighten($value, 0%) 0%, darken($value, 5%) 51%, darken($value, 10%) 100%);
           }
@@ -42,7 +42,7 @@
 
       &.-gradient {
         @include linear-gradient(to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
-        
+
         &:hover {
           @include linear-gradient(to left, lighten($value, 5%) 0%, lighten($value, 2%) 51%, darken($value, 5%) 100%);
         }
