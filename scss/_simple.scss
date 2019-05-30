@@ -1,32 +1,38 @@
 .button {
-  font-size: $size-8;
-  padding: 0.625rem 1rem;
-  color: $white;
-  text-align: center;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  line-height: 1rem;
-  border-width: 0;
   background-color: $blue;
   border: 1px solid transparent;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $family-sans-serif;
+  font-size: $size-8;
+  line-height: 1rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.625rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+  vertical-align: middle;
 
-  .-disabled {
-    background-color: $grey-lighter;
-    color: $grey-dark;
-  }
-
+  .-disabled,
   &:disabled {
     background-color: $grey-lighter;
     color: $grey-dark;
   }
 
-  &:focus {
+  &:focus,
+  .-focus {
     outline: none;
   }
 
-  &.-outline {
-    background-color: transparent;
+  @include button-color($colors);
+
+  &.-rounded {
+    @include border-radius(4px);
   }
 
-  @include button-color($colors);
+  &.-pill {
+    @include border-radius(50px);
+  }
 }

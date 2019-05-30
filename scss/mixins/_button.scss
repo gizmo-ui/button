@@ -4,15 +4,20 @@
       background-color: $value;
 
       &.-outline {
+        background-color: transparent;
         border-color: $value;
         color: $value;
-        background-color: transparent;
 
         &:hover {
           background-color: transparent;
-          border-color: darken($value, 8%);
-          color: darken($value, 8%);
+          border-color: darken($value, 16%);
+          color: darken($value, 16%);
         }
+      }
+
+      &.-link {
+        background-color: transparent;
+        color: $value;
       }
 
       &:focus {

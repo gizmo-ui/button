@@ -1,27 +1,31 @@
 .button {
-  font-size: 0.875rem;
-  padding: 0.625rem 1rem;
-  color: white;
-  text-align: center;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  line-height: 1rem;
-  border-width: 0;
   background-color: #0651f4;
   border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.625rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
 }
 
-.button .-disabled {
+.button .-disabled, .button:disabled {
   background-color: #dbdbdb;
   color: #4a4a4a;
 }
 
-.button:disabled {
-  background-color: #dbdbdb;
-  color: #4a4a4a;
-}
-
-.button:focus {
+.button:focus,
+.button .-focus {
   outline: none;
 }
 
@@ -30,15 +34,20 @@
 }
 
 .button.-blue.-outline {
+  background-color: transparent;
   border-color: #0651f4;
   color: #0651f4;
-  background-color: transparent;
 }
 
 .button.-blue.-outline:hover {
   background-color: transparent;
-  border-color: #0544cc;
-  color: #0544cc;
+  border-color: #0437a4;
+  color: #0437a4;
+}
+
+.button.-blue.-link {
+  background-color: transparent;
+  color: #0651f4;
 }
 
 .button.-blue:focus {
@@ -54,15 +63,20 @@
 }
 
 .button.-purple.-outline {
+  background-color: transparent;
   border-color: #382687;
   color: #382687;
-  background-color: transparent;
 }
 
 .button.-purple.-outline:hover {
   background-color: transparent;
-  border-color: #2b1d67;
-  color: #2b1d67;
+  border-color: #1e1448;
+  color: #1e1448;
+}
+
+.button.-purple.-link {
+  background-color: transparent;
+  color: #382687;
 }
 
 .button.-purple:focus {
@@ -78,15 +92,20 @@
 }
 
 .button.-red.-outline {
+  background-color: transparent;
   border-color: #d85822;
   color: #d85822;
-  background-color: transparent;
 }
 
 .button.-red.-outline:hover {
   background-color: transparent;
-  border-color: #b54a1c;
-  color: #b54a1c;
+  border-color: #923c17;
+  color: #923c17;
+}
+
+.button.-red.-link {
+  background-color: transparent;
+  color: #d85822;
 }
 
 .button.-red:focus {
@@ -102,15 +121,20 @@
 }
 
 .button.-orange.-outline {
+  background-color: transparent;
   border-color: #ffa805;
   color: #ffa805;
-  background-color: transparent;
 }
 
 .button.-orange.-outline:hover {
   background-color: transparent;
-  border-color: #db8f00;
-  color: #db8f00;
+  border-color: #b37400;
+  color: #b37400;
+}
+
+.button.-orange.-link {
+  background-color: transparent;
+  color: #ffa805;
 }
 
 .button.-orange:focus {
@@ -126,15 +150,20 @@
 }
 
 .button.-green.-outline {
+  background-color: transparent;
   border-color: #04763d;
   color: #04763d;
-  background-color: transparent;
 }
 
 .button.-green.-outline:hover {
   background-color: transparent;
-  border-color: #034f29;
-  color: #034f29;
+  border-color: #012714;
+  color: #012714;
+}
+
+.button.-green.-link {
+  background-color: transparent;
+  color: #04763d;
 }
 
 .button.-green:focus {
@@ -150,15 +179,20 @@
 }
 
 .button.-cyan.-outline {
+  background-color: transparent;
   border-color: #2dbfd2;
   color: #2dbfd2;
-  background-color: transparent;
 }
 
 .button.-cyan.-outline:hover {
   background-color: transparent;
-  border-color: #25a0b1;
-  color: #25a0b1;
+  border-color: #1e828f;
+  color: #1e828f;
+}
+
+.button.-cyan.-link {
+  background-color: transparent;
+  color: #2dbfd2;
 }
 
 .button.-cyan:focus {
@@ -174,15 +208,20 @@
 }
 
 .button.-white.-outline {
+  background-color: transparent;
   border-color: white;
   color: white;
-  background-color: transparent;
 }
 
 .button.-white.-outline:hover {
   background-color: transparent;
-  border-color: #ebebeb;
-  color: #ebebeb;
+  border-color: #d6d6d6;
+  color: #d6d6d6;
+}
+
+.button.-white.-link {
+  background-color: transparent;
+  color: white;
 }
 
 .button.-white:focus {
@@ -198,15 +237,20 @@
 }
 
 .button.-gray.-outline {
+  background-color: transparent;
   border-color: #7a7a7a;
   color: #7a7a7a;
-  background-color: transparent;
 }
 
 .button.-gray.-outline:hover {
   background-color: transparent;
-  border-color: #666666;
-  color: #666666;
+  border-color: #525252;
+  color: #525252;
+}
+
+.button.-gray.-link {
+  background-color: transparent;
+  color: #7a7a7a;
 }
 
 .button.-gray:focus {
@@ -222,15 +266,20 @@
 }
 
 .button.-black.-outline {
+  background-color: transparent;
   border-color: #0a0a0a;
   color: #0a0a0a;
-  background-color: transparent;
 }
 
 .button.-black.-outline:hover {
   background-color: transparent;
   border-color: black;
   color: black;
+}
+
+.button.-black.-link {
+  background-color: transparent;
+  color: #0a0a0a;
 }
 
 .button.-black:focus {
@@ -241,7 +290,11 @@
   background-color: black;
 }
 
-.button i {
-  float: left;
+.button.-rounded {
+  border-radius: 4px;
+}
+
+.button.-pill {
+  border-radius: 50px;
 }
 /*# sourceMappingURL=button.css.map */
