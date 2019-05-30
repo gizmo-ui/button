@@ -1,0 +1,27 @@
+@mixin button-color($colors) {
+  @each $color, $value in $colors {
+    &.-#{$color} {
+      background-color: $value;
+
+      &.-outline {
+        border-color: $value;
+        color: $value;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+          border-color: darken($value, 8%);
+          color: darken($value, 8%);
+        }
+      }
+
+      &:focus {
+        background-color: lighten($value, 8%);
+      }
+
+      &:hover {
+        background-color: darken($value, 8%);
+      }
+    }
+  }
+}
