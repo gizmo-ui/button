@@ -25,10 +25,6 @@
   outline: none;
 }
 
-.button.-outline {
-  background-color: transparent;
-}
-
 .button.-blue {
   background-color: #0651f4;
 }
@@ -36,6 +32,13 @@
 .button.-blue.-outline {
   border-color: #0651f4;
   color: #0651f4;
+  background-color: transparent;
+}
+
+.button.-blue.-outline:hover {
+  background-color: transparent;
+  border-color: #0544cc;
+  color: #0544cc;
 }
 
 .button.-blue:focus {
@@ -53,6 +56,13 @@
 .button.-purple.-outline {
   border-color: #382687;
   color: #382687;
+  background-color: transparent;
+}
+
+.button.-purple.-outline:hover {
+  background-color: transparent;
+  border-color: #2b1d67;
+  color: #2b1d67;
 }
 
 .button.-purple:focus {
@@ -70,6 +80,13 @@
 .button.-red.-outline {
   border-color: #d85822;
   color: #d85822;
+  background-color: transparent;
+}
+
+.button.-red.-outline:hover {
+  background-color: transparent;
+  border-color: #b54a1c;
+  color: #b54a1c;
 }
 
 .button.-red:focus {
@@ -87,6 +104,13 @@
 .button.-orange.-outline {
   border-color: #ffa805;
   color: #ffa805;
+  background-color: transparent;
+}
+
+.button.-orange.-outline:hover {
+  background-color: transparent;
+  border-color: #db8f00;
+  color: #db8f00;
 }
 
 .button.-orange:focus {
@@ -104,6 +128,13 @@
 .button.-green.-outline {
   border-color: #04763d;
   color: #04763d;
+  background-color: transparent;
+}
+
+.button.-green.-outline:hover {
+  background-color: transparent;
+  border-color: #034f29;
+  color: #034f29;
 }
 
 .button.-green:focus {
@@ -121,6 +152,13 @@
 .button.-cyan.-outline {
   border-color: #2dbfd2;
   color: #2dbfd2;
+  background-color: transparent;
+}
+
+.button.-cyan.-outline:hover {
+  background-color: transparent;
+  border-color: #25a0b1;
+  color: #25a0b1;
 }
 
 .button.-cyan:focus {
@@ -138,6 +176,13 @@
 .button.-white.-outline {
   border-color: white;
   color: white;
+  background-color: transparent;
+}
+
+.button.-white.-outline:hover {
+  background-color: transparent;
+  border-color: #ebebeb;
+  color: #ebebeb;
 }
 
 .button.-white:focus {
@@ -155,6 +200,13 @@
 .button.-gray.-outline {
   border-color: #7a7a7a;
   color: #7a7a7a;
+  background-color: transparent;
+}
+
+.button.-gray.-outline:hover {
+  background-color: transparent;
+  border-color: #666666;
+  color: #666666;
 }
 
 .button.-gray:focus {
@@ -172,6 +224,13 @@
 .button.-black.-outline {
   border-color: #0a0a0a;
   color: #0a0a0a;
+  background-color: transparent;
+}
+
+.button.-black.-outline:hover {
+  background-color: transparent;
+  border-color: black;
+  color: black;
 }
 
 .button.-black:focus {
@@ -180,5 +239,9 @@
 
 .button.-black:hover {
   background-color: black;
+}
+
+.button i {
+  float: left;
 }
 /*# sourceMappingURL=button.css.map */
