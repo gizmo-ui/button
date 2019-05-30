@@ -11,8 +11,22 @@
   border: 1px solid transparent;
 }
 
+.button .-disabled {
+  background-color: #dbdbdb;
+  color: #4a4a4a;
+}
+
+.button:disabled {
+  background-color: #dbdbdb;
+  color: #4a4a4a;
+}
+
 .button:focus {
   outline: none;
+}
+
+.button.-outline {
+  background-color: transparent;
 }
 
 .button.-blue {
@@ -22,7 +36,14 @@
 .button.-blue.-outline {
   border-color: #0651f4;
   color: #0651f4;
-  background-color: transparent;
+}
+
+.button.-blue:focus {
+  background-color: #296bfa;
+}
+
+.button.-blue:hover {
+  background-color: #0544cc;
 }
 
 .button.-purple {
@@ -32,7 +53,14 @@
 .button.-purple.-outline {
   border-color: #382687;
   color: #382687;
-  background-color: transparent;
+}
+
+.button.-purple:focus {
+  background-color: #452fa7;
+}
+
+.button.-purple:hover {
+  background-color: #2b1d67;
 }
 
 .button.-red {
@@ -42,7 +70,14 @@
 .button.-red.-outline {
   border-color: #d85822;
   color: #d85822;
-  background-color: transparent;
+}
+
+.button.-red:focus {
+  background-color: #e17141;
+}
+
+.button.-red:hover {
+  background-color: #b54a1c;
 }
 
 .button.-orange {
@@ -52,7 +87,14 @@
 .button.-orange.-outline {
   border-color: #ffa805;
   color: #ffa805;
-  background-color: transparent;
+}
+
+.button.-orange:focus {
+  background-color: #ffb62e;
+}
+
+.button.-orange:hover {
+  background-color: #db8f00;
 }
 
 .button.-green {
@@ -62,7 +104,14 @@
 .button.-green.-outline {
   border-color: #04763d;
   color: #04763d;
-  background-color: transparent;
+}
+
+.button.-green:focus {
+  background-color: #069d52;
+}
+
+.button.-green:hover {
+  background-color: #034f29;
 }
 
 .button.-cyan {
@@ -72,7 +121,14 @@
 .button.-cyan.-outline {
   border-color: #2dbfd2;
   color: #2dbfd2;
-  background-color: transparent;
+}
+
+.button.-cyan:focus {
+  background-color: #4ec9da;
+}
+
+.button.-cyan:hover {
+  background-color: #25a0b1;
 }
 
 .button.-white {
@@ -82,7 +138,14 @@
 .button.-white.-outline {
   border-color: white;
   color: white;
-  background-color: transparent;
+}
+
+.button.-white:focus {
+  background-color: white;
+}
+
+.button.-white:hover {
+  background-color: #ebebeb;
 }
 
 .button.-gray {
@@ -92,7 +155,14 @@
 .button.-gray.-outline {
   border-color: #7a7a7a;
   color: #7a7a7a;
-  background-color: transparent;
+}
+
+.button.-gray:focus {
+  background-color: #8f8f8f;
+}
+
+.button.-gray:hover {
+  background-color: #666666;
 }
 
 .button.-black {
@@ -102,6 +172,13 @@
 .button.-black.-outline {
   border-color: #0a0a0a;
   color: #0a0a0a;
-  background-color: transparent;
+}
+
+.button.-black:focus {
+  background-color: #1f1f1f;
+}
+
+.button.-black:hover {
+  background-color: black;
 }
 /*# sourceMappingURL=button.css.map */
