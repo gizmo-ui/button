@@ -1,6 +1,7 @@
 .button {
-  background-color: #0651f4;
+  background-color: #304fcf;
   border: 1px solid transparent;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -17,6 +18,7 @@
   -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
+  transition: all 0.2s ease-in-out;
 }
 
 .button .-disabled, .button:disabled {
@@ -30,187 +32,329 @@
 }
 
 .button.-blue {
-  background-color: #0651f4;
+  background-color: #304fcf;
 }
 
 .button.-blue.-outline {
   background-color: transparent;
-  border-color: #0651f4;
-  color: #0651f4;
+  border-color: #304fcf;
+  color: #304fcf;
+}
+
+.button.-blue.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #4d68d6 0%, #304fcf 51%, #2944b2 100%), -webkit-linear-gradient(right, #4d68d6 0%, #304fcf 51%, #2944b2 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #4d68d6 0%, #304fcf 51%, #2944b2 100%;
+  border-right: 1px solid #4d68d6 0%, #304fcf 51%, #2944b2 100%;
+}
+
+.button.-blue.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #304fcf 0%, #2b47ba 51%, #263fa6 100%), -webkit-linear-gradient(right, #304fcf 0%, #2b47ba 51%, #263fa6 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #304fcf 0%, #2b47ba 51%, #263fa6 100%;
+  border-right: 1px solid #304fcf 0%, #2b47ba 51%, #263fa6 100%;
 }
 
 .button.-blue.-outline:hover {
   background-color: transparent;
-  border-color: #0437a4;
-  color: #0437a4;
+  border-color: #21368d;
+  color: #21368d;
 }
 
 .button.-blue.-link {
   background-color: transparent;
-  color: #0651f4;
+  color: #304fcf;
+}
+
+.button.-blue.-gradient {
+  background: #4d68d6;
+  background: linear-gradient(to left, #4d68d6 0%, #304fcf 51%, #2944b2 100%);
+}
+
+.button.-blue.-gradient:hover {
+  background: #4561d4;
+  background: linear-gradient(to left, #4561d4 0%, #3856d1 51%, #2b47ba 100%);
 }
 
 .button.-blue:focus {
-  background-color: #296bfa;
+  background-color: #516bd7;
 }
 
 .button.-blue:hover {
-  background-color: #0544cc;
+  background-color: #2842ae;
 }
 
 .button.-purple {
-  background-color: #382687;
+  background-color: #5a1ef4;
 }
 
 .button.-purple.-outline {
   background-color: transparent;
-  border-color: #382687;
-  color: #382687;
+  border-color: #5a1ef4;
+  color: #5a1ef4;
+}
+
+.button.-purple.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #7340f6 0%, #5a1ef4 51%, #480be3 100%), -webkit-linear-gradient(right, #7340f6 0%, #5a1ef4 51%, #480be3 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #7340f6 0%, #5a1ef4 51%, #480be3 100%;
+  border-right: 1px solid #7340f6 0%, #5a1ef4 51%, #480be3 100%;
+}
+
+.button.-purple.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #5a1ef4 0%, #4b0ced 51%, #430ad5 100%), -webkit-linear-gradient(right, #5a1ef4 0%, #4b0ced 51%, #430ad5 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #5a1ef4 0%, #4b0ced 51%, #430ad5 100%;
+  border-right: 1px solid #5a1ef4 0%, #4b0ced 51%, #430ad5 100%;
 }
 
 .button.-purple.-outline:hover {
   background-color: transparent;
-  border-color: #1e1448;
-  color: #1e1448;
+  border-color: #3a09b7;
+  color: #3a09b7;
 }
 
 .button.-purple.-link {
   background-color: transparent;
-  color: #382687;
+  color: #5a1ef4;
+}
+
+.button.-purple.-gradient {
+  background: #7340f6;
+  background: linear-gradient(to left, #7340f6 0%, #5a1ef4 51%, #480be3 100%);
+}
+
+.button.-purple.-gradient:hover {
+  background: #6c36f5;
+  background: linear-gradient(to left, #6c36f5 0%, #6128f4 51%, #4b0ced 100%);
 }
 
 .button.-purple:focus {
-  background-color: #452fa7;
+  background-color: #7745f6;
 }
 
 .button.-purple:hover {
-  background-color: #2b1d67;
+  background-color: #460bde;
 }
 
 .button.-red {
-  background-color: #d85822;
+  background-color: #ea1b28;
 }
 
 .button.-red.-outline {
   background-color: transparent;
-  border-color: #d85822;
-  color: #d85822;
+  border-color: #ea1b28;
+  color: #ea1b28;
+}
+
+.button.-red.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #ed3c47 0%, #ea1b28 51%, #ce131f 100%), -webkit-linear-gradient(right, #ed3c47 0%, #ea1b28 51%, #ce131f 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #ed3c47 0%, #ea1b28 51%, #ce131f 100%;
+  border-right: 1px solid #ed3c47 0%, #ea1b28 51%, #ce131f 100%;
+}
+
+.button.-red.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #ea1b28 0%, #d81420 51%, #c0121d 100%), -webkit-linear-gradient(right, #ea1b28 0%, #d81420 51%, #c0121d 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #ea1b28 0%, #d81420 51%, #c0121d 100%;
+  border-right: 1px solid #ea1b28 0%, #d81420 51%, #c0121d 100%;
 }
 
 .button.-red.-outline:hover {
   background-color: transparent;
-  border-color: #923c17;
-  color: #923c17;
+  border-color: #a40f18;
+  color: #a40f18;
 }
 
 .button.-red.-link {
   background-color: transparent;
-  color: #d85822;
+  color: #ea1b28;
+}
+
+.button.-red.-gradient {
+  background: #ed3c47;
+  background: linear-gradient(to left, #ed3c47 0%, #ea1b28 51%, #ce131f 100%);
+}
+
+.button.-red.-gradient:hover {
+  background: #ec323e;
+  background: linear-gradient(to left, #ec323e 0%, #eb2431 51%, #d81420 100%);
 }
 
 .button.-red:focus {
-  background-color: #e17141;
+  background-color: #ed404b;
 }
 
 .button.-red:hover {
-  background-color: #b54a1c;
+  background-color: #ca131e;
 }
 
 .button.-orange {
-  background-color: #ffa805;
+  background-color: #fb5923;
 }
 
 .button.-orange.-outline {
   background-color: transparent;
-  border-color: #ffa805;
-  color: #ffa805;
+  border-color: #fb5923;
+  color: #fb5923;
+}
+
+.button.-orange.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #fc7346 0%, #fb5923 51%, #f64104 100%), -webkit-linear-gradient(right, #fc7346 0%, #fb5923 51%, #f64104 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #fc7346 0%, #fb5923 51%, #f64104 100%;
+  border-right: 1px solid #fc7346 0%, #fb5923 51%, #f64104 100%;
+}
+
+.button.-orange.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #fb5923 0%, #fb460a 51%, #e73d04 100%), -webkit-linear-gradient(right, #fb5923 0%, #fb460a 51%, #e73d04 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #fb5923 0%, #fb460a 51%, #e73d04 100%;
+  border-right: 1px solid #fb5923 0%, #fb460a 51%, #e73d04 100%;
 }
 
 .button.-orange.-outline:hover {
   background-color: transparent;
-  border-color: #b37400;
-  color: #b37400;
+  border-color: #c93504;
+  color: #c93504;
 }
 
 .button.-orange.-link {
   background-color: transparent;
-  color: #ffa805;
+  color: #fb5923;
+}
+
+.button.-orange.-gradient {
+  background: #fc7346;
+  background: linear-gradient(to left, #fc7346 0%, #fb5923 51%, #f64104 100%);
+}
+
+.button.-orange.-gradient:hover {
+  background: #fb6c3c;
+  background: linear-gradient(to left, #fb6c3c 0%, #fb612d 51%, #fb460a 100%);
 }
 
 .button.-orange:focus {
-  background-color: #ffb62e;
+  background-color: #fc774b;
 }
 
 .button.-orange:hover {
-  background-color: #db8f00;
+  background-color: #f13f04;
 }
 
 .button.-green {
-  background-color: #04763d;
+  background-color: #07751f;
 }
 
 .button.-green.-outline {
   background-color: transparent;
-  border-color: #04763d;
-  color: #04763d;
+  border-color: #07751f;
+  color: #07751f;
+}
+
+.button.-green.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #099728 0%, #07751f 51%, #055316 100%), -webkit-linear-gradient(right, #099728 0%, #07751f 51%, #055316 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #099728 0%, #07751f 51%, #055316 100%;
+  border-right: 1px solid #099728 0%, #07751f 51%, #055316 100%;
+}
+
+.button.-green.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #07751f 0%, #065d19 51%, #044512 100%), -webkit-linear-gradient(right, #07751f 0%, #065d19 51%, #044512 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #07751f 0%, #065d19 51%, #044512 100%;
+  border-right: 1px solid #07751f 0%, #065d19 51%, #044512 100%;
 }
 
 .button.-green.-outline:hover {
   background-color: transparent;
-  border-color: #012714;
-  color: #012714;
+  border-color: #02280b;
+  color: #02280b;
 }
 
 .button.-green.-link {
   background-color: transparent;
-  color: #04763d;
+  color: #07751f;
+}
+
+.button.-green.-gradient {
+  background: #099728;
+  background: linear-gradient(to left, #099728 0%, #07751f 51%, #055316 100%);
+}
+
+.button.-green.-gradient:hover {
+  background: #088d25;
+  background: linear-gradient(to left, #088d25 0%, #087f22 51%, #065d19 100%);
 }
 
 .button.-green:focus {
-  background-color: #069d52;
+  background-color: #099b29;
 }
 
 .button.-green:hover {
-  background-color: #034f29;
-}
-
-.button.-cyan {
-  background-color: #2dbfd2;
-}
-
-.button.-cyan.-outline {
-  background-color: transparent;
-  border-color: #2dbfd2;
-  color: #2dbfd2;
-}
-
-.button.-cyan.-outline:hover {
-  background-color: transparent;
-  border-color: #1e828f;
-  color: #1e828f;
-}
-
-.button.-cyan.-link {
-  background-color: transparent;
-  color: #2dbfd2;
-}
-
-.button.-cyan:focus {
-  background-color: #4ec9da;
-}
-
-.button.-cyan:hover {
-  background-color: #25a0b1;
+  background-color: #054f15;
 }
 
 .button.-white {
   background-color: white;
+  color: #0a0a0a;
 }
 
 .button.-white.-outline {
   background-color: transparent;
-  border-color: white;
-  color: white;
+  border-color: #0a0a0a;
+  color: #0a0a0a;
+}
+
+.button.-white.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, white 0%, white 51%, #ededed 100%), -webkit-linear-gradient(right, white 0%, white 51%, #ededed 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid white 0%, white 51%, #ededed 100%;
+  border-right: 1px solid white 0%, white 51%, #ededed 100%;
+}
+
+.button.-white.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, white 0%, #f2f2f2 51%, #e6e6e6 100%), -webkit-linear-gradient(right, white 0%, #f2f2f2 51%, #e6e6e6 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid white 0%, #f2f2f2 51%, #e6e6e6 100%;
+  border-right: 1px solid white 0%, #f2f2f2 51%, #e6e6e6 100%;
 }
 
 .button.-white.-outline:hover {
@@ -224,41 +368,22 @@
   color: white;
 }
 
+.button.-white.-gradient {
+  background: white;
+  background: linear-gradient(to left, white 0%, white 51%, #ededed 100%);
+}
+
+.button.-white.-gradient:hover {
+  background: white;
+  background: linear-gradient(to left, white 0%, white 51%, #f2f2f2 100%);
+}
+
 .button.-white:focus {
   background-color: white;
 }
 
 .button.-white:hover {
   background-color: #ebebeb;
-}
-
-.button.-gray {
-  background-color: #7a7a7a;
-}
-
-.button.-gray.-outline {
-  background-color: transparent;
-  border-color: #7a7a7a;
-  color: #7a7a7a;
-}
-
-.button.-gray.-outline:hover {
-  background-color: transparent;
-  border-color: #525252;
-  color: #525252;
-}
-
-.button.-gray.-link {
-  background-color: transparent;
-  color: #7a7a7a;
-}
-
-.button.-gray:focus {
-  background-color: #8f8f8f;
-}
-
-.button.-gray:hover {
-  background-color: #666666;
 }
 
 .button.-black {
@@ -271,6 +396,26 @@
   color: #0a0a0a;
 }
 
+.button.-black.-outline.-gradient {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #1c1c1c 0%, #0a0a0a 51%, black 100%), -webkit-linear-gradient(right, #1c1c1c 0%, #0a0a0a 51%, black 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #1c1c1c 0%, #0a0a0a 51%, black 100%;
+  border-right: 1px solid #1c1c1c 0%, #0a0a0a 51%, black 100%;
+}
+
+.button.-black.-outline.-gradient:hover {
+  background-clip: border-box;
+  background-image: -webkit-linear-gradient(right, #0a0a0a 0%, black 51%, black 100%), -webkit-linear-gradient(right, #0a0a0a 0%, black 51%, black 100%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-left: 1px solid #0a0a0a 0%, black 51%, black 100%;
+  border-right: 1px solid #0a0a0a 0%, black 51%, black 100%;
+}
+
 .button.-black.-outline:hover {
   background-color: transparent;
   border-color: black;
@@ -280,6 +425,16 @@
 .button.-black.-link {
   background-color: transparent;
   color: #0a0a0a;
+}
+
+.button.-black.-gradient {
+  background: #1c1c1c;
+  background: linear-gradient(to left, #1c1c1c 0%, #0a0a0a 51%, black 100%);
+}
+
+.button.-black.-gradient:hover {
+  background: #171717;
+  background: linear-gradient(to left, #171717 0%, #0f0f0f 51%, black 100%);
 }
 
 .button.-black:focus {
@@ -295,6 +450,6 @@
 }
 
 .button.-pill {
-  border-radius: 50px;
+  border-radius: 290486px;
 }
 /*# sourceMappingURL=button.css.map */

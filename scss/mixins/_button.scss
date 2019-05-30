@@ -3,10 +3,30 @@
     &.-#{$color} {
       background-color: $value;
 
+      @if $color=="white" {
+        color: $black;
+      }
+
       &.-outline {
         background-color: transparent;
-        border-color: $value;
-        color: $value;
+
+        @if $color=="white" {
+          border-color: $black;
+          color: $black;
+        }
+
+        @else {
+          border-color: $value;
+          color: $value;
+        }
+
+        &.-gradient {
+          @include border-gradient(1px, to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
+          
+          &:hover {
+            @include border-gradient(1px, to left, lighten($value, 0%) 0%, darken($value, 5%) 51%, darken($value, 10%) 100%);
+          }
+        }
 
         &:hover {
           background-color: transparent;
@@ -18,6 +38,14 @@
       &.-link {
         background-color: transparent;
         color: $value;
+      }
+
+      &.-gradient {
+        @include linear-gradient(to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
+        
+        &:hover {
+          @include linear-gradient(to left, lighten($value, 5%) 0%, lighten($value, 2%) 51%, darken($value, 5%) 100%);
+        }
       }
 
       &:focus {

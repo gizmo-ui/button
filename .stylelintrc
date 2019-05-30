@@ -10,7 +10,7 @@
       "transition"
     ],
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "else"]
+      "ignoreAtRules": ["function", "if", "each", "include", "mixin", "else", "return", "error"]
     }]
   }
 }
