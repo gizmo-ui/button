@@ -15,6 +15,7 @@
   text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
+
   @include transition(all, 0.2s, ease-in-out);
 
   .icon-left {
