@@ -43,6 +43,7 @@
   ],
   "homepage": "https://github.com/gismokit/button#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
     "autoprefixer": "^9.5.1",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.12.0",
