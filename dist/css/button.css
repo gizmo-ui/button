@@ -21,6 +21,14 @@
   transition: all 0.2s ease-in-out;
 }
 
+.button .icon-left {
+  padding-right: 0.45rem;
+}
+
+.button .icon-right {
+  padding-left: 0.45rem;
+}
+
 .button .-disabled, .button:disabled {
   background-color: #dbdbdb;
   color: #4a4a4a;

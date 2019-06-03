@@ -16,6 +16,14 @@
   user-select: none;
   vertical-align: middle;
 
+  .icon-left {
+    padding-right: 0.45rem;
+  }
+
+  .icon-right {
+    padding-left: 0.45rem;
+  }
+
   @include transition(all, 0.2s, ease-in-out);
 
   .-disabled,
