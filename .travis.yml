@@ -25,6 +25,9 @@ before_script:
 script:
   - yarn css-main
 
+after_success:
+  - yarn deploy-storybook
+
 # deploy:
 #   provider: npm
 #   email: jalalazimi@gmail.com
