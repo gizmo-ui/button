@@ -1,10 +1,10 @@
 {
   "name": "@gismo/button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "bundlesize",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-main": "npm-run-all css-lint:fix css-lint css-compile css-prefix css-minify",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/button.scss dist/css/button.css",
@@ -22,7 +22,8 @@
     "type": "git",
     "url": "git+https://github.com/gismokit/button.git"
   },
-  "authors": [{
+  "authors": [
+    {
       "name": "Jalal Azimi",
       "email": "jalalazimi@gmail.com"
     },
@@ -51,6 +52,7 @@
     "@storybook/storybook-deployer": "^2.8.1",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",
+    "bundlesize": "^0.17.2",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
@@ -62,5 +64,11 @@
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-standard": "^18.3.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "bundlesize": [
+    {
+      "path": "./dist/css/button.min.css",
+      "maxSize": "5 kB"
+    }
+  ]
 }
