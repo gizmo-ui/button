@@ -11,6 +11,10 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
+.vscode
 
 # Folders to ignore
 /node_modules/
+
+#build
+/storybook-static
