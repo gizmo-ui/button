@@ -14,13 +14,11 @@ $white-ter: hsl(0, 0%, 96%) !default;
 $white-bis: hsl(0, 0%, 98%) !default;
 $white: hsl(0, 0%, 100%) !default;
 
-$orange: hsl(39, 100%, 51%) !default;
-$green: hsl(150, 93%, 24%) !default;
-$cyan: hsl(187, 65%, 50%) !default;
-$blue: hsl(221, 95%, 49%) !default;
-$steelblue:  hsl(197, 97%, 39%) !default;
-$purple: hsl(251, 56%, 34%) !default;
-$red: hsl(18, 73%, 49%) !default;
+$orange: #fb5923 !default;
+$green: #07751f !default;
+$blue: #304fcf !default;
+$purple: #5a1ef4 !default;
+$red: #ea1b28 !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -30,9 +28,7 @@ $colors: map-merge(
     "red":        $red,
     "orange":     $orange,
     "green":      $green,
-    "cyan":       $cyan,
     "white":      $white,
-    "gray":       $grey,
     "black":      $black
   ),
   $colors

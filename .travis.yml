@@ -1,0 +1,32 @@
+language: node_js
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - ~/.npm
+
+notifications:
+  email: false
+
+node_js:
+  - '9'
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+before_script:
+ - yarn install
+
+script:
+  - yarn css-main
+
+# deploy:
+#   provider: npm
+#   email: jalalazimi@gmail.com
+#   api_key: $NPM_TOKEN
+#   skip_cleanup: true
