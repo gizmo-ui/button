@@ -33,5 +33,3 @@ deploy:
   skip_cleanup: true
   email: jalalazimi@gmail.com
   api_key: $NPM_TOKEN
-  on:
-    tags: true

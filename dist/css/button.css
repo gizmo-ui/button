@@ -1,16 +1,18 @@
 .button {
+  -webkit-tap-highlight-color: transparent;
   background-color: #304fcf;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
   color: white;
   cursor: pointer;
   display: inline-block;
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.875rem;
-  line-height: 1rem;
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
-  padding: 0.625rem 1rem;
+  line-height: 1em;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+  min-height: 1em;
+  padding: 0.785714em 1.5em;
   text-align: center;
   text-transform: uppercase;
   -webkit-user-select: none;
@@ -459,5 +461,37 @@
 
 .button.-pill {
   border-radius: 290486px;
+}
+
+.button.-small {
+  font-size: 0.8125rem;
+}
+
+.button.-xsmall {
+  font-size: 0.75rem;
+}
+
+.button.-xxsmall {
+  font-size: 0.6875rem;
+}
+
+.button.-compact {
+  padding: 0.628571em 0.9em;
+}
+
+.button.-large {
+  font-size: 1.125rem;
+}
+
+.button.-xlarge {
+  font-size: 1.25rem;
+}
+
+.button.-xxlarge {
+  font-size: 1.5rem;
+}
+
+.button.-block {
+  display: block;
 }
 /*# sourceMappingURL=button.css.map */
