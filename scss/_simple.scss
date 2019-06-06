@@ -1,16 +1,18 @@
 .button {
+  -webkit-tap-highlight-color: transparent;
   background-color: $blue;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
   color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $family-sans-serif;
-  font-size: $size-8;
-  line-height: 1rem;
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
-  padding: 0.625rem 1rem;
+  font-size: $mediumSize;
+  line-height: 1em;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+  min-height: 1em;
+  padding: $padding-vertical $padding-horizental;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
@@ -45,5 +47,40 @@
 
   &.-pill {
     @include border-radius($radius-rounded);
+  }
+
+  &.-small {
+    font-size: $smallSize;
+  }
+
+  &.-xsmall {
+    font-size: $tinySize;
+  }
+
+  &.-xxsmall {
+    font-size: $miniSize;
+  }
+
+  &.-compact {
+    $vertical-ratio: 0.8;
+    $horizental-ratio: 0.6;
+
+    padding: $padding-vertical*$vertical-ratio $padding-horizental*$horizental-ratio;
+  }
+
+  &.-large {
+    font-size: $bigSize;
+  }
+
+  &.-xlarge {
+    font-size: $hugeSize;
+  }
+
+  &.-xxlarge {
+    font-size: $massiveSize;
+  }
+
+  &.-block {
+    display: block;
   }
 }
