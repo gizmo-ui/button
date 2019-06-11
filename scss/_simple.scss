@@ -13,6 +13,7 @@
   margin-top: 0.25em;
   min-height: 1em;
   padding: $padding-vertical $padding-horizental;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   user-select: none;
@@ -62,10 +63,10 @@
   }
 
   &.-compact {
-    $vertical-ratio: 0.8;
     $horizental-ratio: 0.6;
+    $vertical-ratio: 0.8;
 
-    padding: $padding-vertical*$vertical-ratio $padding-horizental*$horizental-ratio;
+    padding: $padding-vertical * $vertical-ratio $padding-horizental * $horizental-ratio;
   }
 
   &.-large {
@@ -82,5 +83,37 @@
 
   &.-block {
     display: block;
+  }
+
+  &.-loading {
+    color: transparent !important;
+
+    @include keyframes(spin-around) {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    &::after {
+      @include animation("spin-around 0.5s infinite linear");
+      @include border-radius(50%);
+
+      background: center center no-repeat;
+      background-size: cover;
+      border: 2px solid #fff;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: "";
+      display: block;
+      height: 1em;
+      left: calc(50% - (1em / 2));
+      position: absolute;
+      top: calc(50% - (1em / 2));
+      width: 1em;
+    }
   }
 }

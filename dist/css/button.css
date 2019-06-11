@@ -13,6 +13,7 @@
   margin-top: 0.25em;
   min-height: 1em;
   padding: 0.785714em 1.5em;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   -webkit-user-select: none;
@@ -77,6 +78,12 @@
   color: #21368d;
 }
 
+.button.-blue.-outline.-loading::after {
+  border-color: #304fcf;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
 .button.-blue.-link {
   background-color: transparent;
   color: #304fcf;
@@ -134,6 +141,12 @@
   background-color: transparent;
   border-color: #3a09b7;
   color: #3a09b7;
+}
+
+.button.-purple.-outline.-loading::after {
+  border-color: #5a1ef4;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button.-purple.-link {
@@ -195,6 +208,12 @@
   color: #a40f18;
 }
 
+.button.-red.-outline.-loading::after {
+  border-color: #ea1b28;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
 .button.-red.-link {
   background-color: transparent;
   color: #ea1b28;
@@ -252,6 +271,12 @@
   background-color: transparent;
   border-color: #c93504;
   color: #c93504;
+}
+
+.button.-orange.-outline.-loading::after {
+  border-color: #fb5923;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button.-orange.-link {
@@ -313,6 +338,12 @@
   color: #02280b;
 }
 
+.button.-green.-outline.-loading::after {
+  border-color: #07751f;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
 .button.-green.-link {
   background-color: transparent;
   color: #07751f;
@@ -339,6 +370,12 @@
 .button.-white {
   background-color: white;
   color: #0a0a0a;
+}
+
+.button.-white.-loading::after {
+  border-color: #0a0a0a;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button.-white.-outline {
@@ -371,6 +408,12 @@
   background-color: transparent;
   border-color: #d6d6d6;
   color: #d6d6d6;
+}
+
+.button.-white.-outline.-loading::after {
+  border-color: white;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button.-white.-link {
@@ -430,6 +473,12 @@
   background-color: transparent;
   border-color: black;
   color: black;
+}
+
+.button.-black.-outline.-loading::after {
+  border-color: #0a0a0a;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button.-black.-link {
@@ -493,5 +542,45 @@
 
 .button.-block {
   display: block;
+}
+
+.button.-loading {
+  color: transparent !important;
+}
+
+@-webkit-keyframes spin-around {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-around {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button.-loading::after {
+  -webkit-animation: spin-around 0.5s infinite linear;
+  animation: spin-around 0.5s infinite linear;
+  border-radius: 50%;
+  background: center center no-repeat;
+  background-size: cover;
+  border: 2px solid #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  left: calc(50% - (1em / 2));
+  position: absolute;
+  top: calc(50% - (1em / 2));
+  width: 1em;
 }
 /*# sourceMappingURL=button.css.map */

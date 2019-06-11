@@ -3,14 +3,24 @@
     &.-#{$color} {
       background-color: $value;
 
-      @if $color=="white" {
+      @if $color== "white" {
         color: $black;
+      }
+
+      &.-loading {
+        @if $color== "white" {
+          &::after {
+            border-color: $black;
+            border-right-color: transparent;
+            border-top-color: transparent;
+          }
+        }
       }
 
       &.-outline {
         background-color: transparent;
 
-        @if $color=="white" {
+        @if $color== "white" {
           border-color: $black;
           color: $black;
         }
@@ -21,10 +31,22 @@
         }
 
         &.-gradient {
-          @include border-gradient(1px, to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
+          @include border-gradient(
+            1px,
+            to left,
+            lighten($value, 7%) 0%,
+            lighten($value, 0%) 51%,
+            darken($value, 7%) 100%
+          );
 
           &:hover {
-            @include border-gradient(1px, to left, lighten($value, 0%) 0%, darken($value, 5%) 51%, darken($value, 10%) 100%);
+            @include border-gradient(
+              1px,
+              to left,
+              lighten($value, 0%) 0%,
+              darken($value, 5%) 51%,
+              darken($value, 10%) 100%
+            );
           }
         }
 
@@ -32,6 +54,14 @@
           background-color: transparent;
           border-color: darken($value, 16%);
           color: darken($value, 16%);
+        }
+
+        &.-loading {
+          &::after {
+            border-color: $value;
+            border-right-color: transparent;
+            border-top-color: transparent;
+          }
         }
       }
 
