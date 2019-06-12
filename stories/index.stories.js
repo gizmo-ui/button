@@ -1,29 +1,13 @@
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
 import { storiesOf } from '@storybook/react';
-import renderHTML from 'react-render-html';
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/styles/prism";
-
+import Demo from './buttons/demo';
 import '../dist/css/button.css';
 import "@fortawesome/fontawesome-free/css/all.css";
+import SimpleButton from './buttons/simple';
+import PillButton from './buttons/pill';
+import RoundedButton from './buttons/rounded';
 
-import SimpleButton from './buttons/simple'
-import PillButton from './buttons/pill'
-import RoundedButton from './buttons/rounded'
-
-const colors = ['blue', 'purple', 'red', 'orange', 'green', 'white', 'black'];
 const sizes = ['xxsmall', 'xsmall', 'small', 'compact', 'large', 'xlarge', 'xxlarge'];
-
-const Button = (className, children = "button") => renderHTML(` <button class="button ${className}">${children}</button> `);
-
-const Demo = (src) => (
-  <div>
-    {src}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(src).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
-  </div>);
 
 storiesOf('Simple', module)
   .add('Default', () => (<div>
@@ -32,11 +16,11 @@ storiesOf('Simple', module)
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Demo(SimpleButton(true))}
+    {Demo(SimpleButton({ outline : true}))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Demo(SimpleButton(false, true))}
+    {Demo(SimpleButton({ gradient : true }))}
   </div>));
 
 storiesOf('Pill', module)
@@ -46,11 +30,11 @@ storiesOf('Pill', module)
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Demo(PillButton(true))}
+    {Demo(PillButton({ outline : true }))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Demo(PillButton(false, true))}
+    {Demo(PillButton({ gradient : true }))}
   </div>));
 
 storiesOf('Rounded', module)
@@ -60,11 +44,11 @@ storiesOf('Rounded', module)
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Demo(RoundedButton(true))}
+    {Demo(RoundedButton({ outline : true }))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Demo(RoundedButton(false, true))}
+    {Demo(RoundedButton({ gradient : true }))}
   </div>));
 
 storiesOf('Size', module)

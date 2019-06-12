@@ -2,9 +2,8 @@ import Button from './button';
 import classnames from 'classnames';
 
 const colors = ['blue', 'purple', 'red', 'orange', 'green', 'white', 'black'];
-
-const SimpleButton = (outline = false, gradient = false) => {
-  const buttonStyle = classnames({'-outline': outline}, {'-gradient': gradient});
+const SimpleButton = ({ outline = false, gradient = false } = {}) => {
+  const buttonStyle = classnames({ '-outline': outline }, { '-gradient': gradient });
 
   return [
     colors.map(color => Button(classnames(`-${color}`, buttonStyle))),
