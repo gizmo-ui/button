@@ -19,7 +19,7 @@
   user-select: none;
   vertical-align: middle;
 
-  @include transition(all, 0.2s, ease-in-out);
+  @include transition(all, 0.2s, linear);
 
   .icon-left {
     padding-right: 0.45rem;
@@ -99,9 +99,6 @@
     }
 
     &::after {
-      @include animation("spin-around 0.5s infinite linear");
-      @include border-radius(50%);
-
       background: center center no-repeat;
       background-size: cover;
       border: 2px solid #fff;
@@ -114,6 +111,9 @@
       position: absolute;
       top: calc(50% - (1em / 2));
       width: 1em;
+
+      @include animation("spin-around 0.5s infinite linear");
+      @include border-radius(50%);
     }
   }
 }

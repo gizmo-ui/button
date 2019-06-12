@@ -1,14 +1,14 @@
 @mixin button-color($colors) {
-  @each $color, $value in $colors {
+  @each $color,$value in $colors {
     &.-#{$color} {
       background-color: $value;
 
-      @if $color== "white" {
+      @if $color=="white" {
         color: $black;
       }
 
       &.-loading {
-        @if $color== "white" {
+        @if $color=="white" {
           &::after {
             border-color: $black;
             border-right-color: transparent;
@@ -19,41 +19,19 @@
 
       &.-outline {
         background-color: transparent;
-
-        @if $color== "white" {
-          border-color: $black;
-          color: $black;
-        }
-
-        @else {
-          border-color: $value;
-          color: $value;
-        }
-
-        &.-gradient {
-          @include border-gradient(
-            1px,
-            to left,
-            lighten($value, 7%) 0%,
-            lighten($value, 0%) 51%,
-            darken($value, 7%) 100%
-          );
-
-          &:hover {
-            @include border-gradient(
-              1px,
-              to left,
-              lighten($value, 0%) 0%,
-              darken($value, 5%) 51%,
-              darken($value, 10%) 100%
-            );
-          }
-        }
+        border-color: $value;
+        color: $value;
 
         &:hover {
-          background-color: transparent;
-          border-color: darken($value, 16%);
-          color: darken($value, 16%);
+          @if $color=="white" {
+            background-color: $black;
+            color: $black;
+          }
+
+          @else {
+            background-color: $value;
+            color: $white;
+          }
         }
 
         &.-loading {
@@ -61,6 +39,21 @@
             border-color: $value;
             border-right-color: transparent;
             border-top-color: transparent;
+          }
+
+          &:hover {
+            &::after {
+              @if $color=="white" {
+                border-color: $black;
+              }
+
+              @else {
+                border-color: $white;
+              }
+
+              border-right-color: transparent;
+              border-top-color: transparent;
+            }
           }
         }
       }
@@ -71,10 +64,10 @@
       }
 
       &.-gradient {
-        @include linear-gradient(to left, lighten($value, 7%) 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
+        @include linear-gradient(to top left, $value 0%, lighten($value, 0%) 51%, darken($value, 7%) 100%);
 
         &:hover {
-          @include linear-gradient(to left, lighten($value, 5%) 0%, lighten($value, 2%) 51%, darken($value, 5%) 100%);
+          @include linear-gradient(to top left, lighten($value, 5%) 0%, lighten($value, 2%) 51%, darken($value, 5%) 100%);
         }
       }
 
