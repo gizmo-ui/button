@@ -52,18 +52,3 @@
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
-
-@mixin border-gradient($width, $direction, $color-stops...) {
-  @if is-direction($direction) == false {
-    $color-stops: $direction, $color-stops;
-    $direction: 180deg;
-  }
-
-  background-clip: border-box;
-  background-image: -webkit-linear-gradient(legacy-direction($direction), $color-stops), -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background-position: 0 100%, 0 0;
-  background-repeat: no-repeat;
-  background-size: 100% 0;
-  border-left: 1px solid $color-stops;
-  border-right: 1px solid $color-stops;
-}
