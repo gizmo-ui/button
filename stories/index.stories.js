@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { storiesOf } from '@storybook/react';
-import {
-  withInfo
-} from '@storybook/addon-info';
 import renderHTML from 'react-render-html';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/styles/prism";
@@ -11,19 +8,12 @@ import { darcula } from "react-syntax-highlighter/dist/styles/prism";
 import '../dist/css/button.css';
 import "@fortawesome/fontawesome-free/css/all.css";
 
+import SimpleButton from './buttons/simple'
+
 const colors = ['blue', 'purple', 'red', 'orange', 'green', 'white', 'black'];
 const sizes = ['xxsmall', 'xsmall', 'small', 'compact', 'large', 'xlarge', 'xxlarge'];
 
 const Button = (className, children = "button") => renderHTML(` <button class="button ${className}">${children}</button> `);
-const Simple = (outline = false, gradient = false) => ([
-  colors.map(color => Button(`-${color} ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`)),
-  Button(`-blue ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-angle-left icon-left"></i>button'),
-  Button(`-purple ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, 'button<i class="fas fa-angle-right icon-right"></i>'),
-  Button(`-red ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-cog"></i>'),
-  Button(`-white ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-black ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-green ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button')
-]);
 
 const Pill = (outline = false, gradient = false) => ([
   colors.map(color => Button(`-${color} -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`)),
@@ -45,54 +35,44 @@ const Rounded = (outline = false, gradient = false) => ([
   Button(`-green -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button')
 ]);
 
+const Demo = (src) => (
+  <div>
+    {src}
+    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
+      {`${ReactDOMServer.renderToStaticMarkup(src).replace(/<\/button> /g, '<\/button>\n')}`}
+    </SyntaxHighlighter>
+  </div>);
+
 storiesOf('Simple', module)
   .add('Default', () => (<div>
     <h1>Default button</h1>
-    {Simple()}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Simple()).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(SimpleButton())}
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Simple(true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Simple(true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(SimpleButton(true))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Simple(false, true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Simple(false, true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(SimpleButton(false, true))}
   </div>));
 
 storiesOf('Pill', module)
-  .add('Default', (<div>
+  .add('Default', () => (<div>
     <h1>Default button</h1>
-    {Pill()}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Pill()).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(Pill())}
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Pill(true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Pill(true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(Pill(true))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Pill(false, true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Pill(false, true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(Pill(false, true))}
   </div>));
 
 storiesOf('Rounded', module)
-  .add('Default', (<div>
+  .add('Default', () => (<div>
     <h1>Default button</h1>
     {Rounded()}
     <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
