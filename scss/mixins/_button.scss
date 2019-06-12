@@ -20,12 +20,18 @@
       &.-outline {
         background-color: transparent;
         border-color: $value;
-        color: $value;
+
+        @if $color=="white" {
+          color: $black;
+        }
+
+        @else {
+          color: $value;
+        }
 
         &:hover {
           @if $color=="white" {
-            background-color: $black;
-            color: $black;
+            background-color: $grey-lighter;
           }
 
           @else {
@@ -36,7 +42,14 @@
 
         &.-loading {
           &::after {
-            border-color: $value;
+            @if $color=="white" {
+              border-color: $black;
+            }
+
+            @else {
+              border-color: $value;
+            }
+
             border-right-color: transparent;
             border-top-color: transparent;
           }

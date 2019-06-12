@@ -9,31 +9,13 @@ import '../dist/css/button.css';
 import "@fortawesome/fontawesome-free/css/all.css";
 
 import SimpleButton from './buttons/simple'
+import PillButton from './buttons/pill'
+import RoundedButton from './buttons/rounded'
 
 const colors = ['blue', 'purple', 'red', 'orange', 'green', 'white', 'black'];
 const sizes = ['xxsmall', 'xsmall', 'small', 'compact', 'large', 'xlarge', 'xxlarge'];
 
 const Button = (className, children = "button") => renderHTML(` <button class="button ${className}">${children}</button> `);
-
-const Pill = (outline = false, gradient = false) => ([
-  colors.map(color => Button(`-${color} -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`)),
-  Button(`-blue -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-angle-left icon-left"></i>button'),
-  Button(`-purple -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, 'button<i class="fas fa-angle-right icon-right"></i>'),
-  Button(`-red -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-cog"></i>'),
-  Button(`-white -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-black -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-green -pill ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button')
-]);
-
-const Rounded = (outline = false, gradient = false) => ([
-  colors.map(color => Button(`-${color} -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`)),
-  Button(`-blue -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-angle-left icon-left"></i>button'),
-  Button(`-purple -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, 'button<i class="fas fa-angle-right icon-right"></i>'),
-  Button(`-red -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""}`, '<i class="fas fa-cog"></i>'),
-  Button(`-white -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-black -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button'),
-  Button(`-green -rounded ${outline ? '-outline' : ""} ${gradient ? '-gradient' : ""} -loading`, 'button')
-]);
 
 const Demo = (src) => (
   <div>
@@ -60,38 +42,29 @@ storiesOf('Simple', module)
 storiesOf('Pill', module)
   .add('Default', () => (<div>
     <h1>Default button</h1>
-    {Demo(Pill())}
+    {Demo(PillButton())}
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Demo(Pill(true))}
+    {Demo(PillButton(true))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Demo(Pill(false, true))}
+    {Demo(PillButton(false, true))}
   </div>));
 
 storiesOf('Rounded', module)
   .add('Default', () => (<div>
     <h1>Default button</h1>
-    {Rounded()}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Rounded()).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(RoundedButton())}
   </div>))
   .add('Outline', () => (<div>
     <h1>Outline button</h1>
-    {Rounded(true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Rounded(true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(RoundedButton(true))}
   </div>))
   .add('Gradient', () => (<div>
     <h1>Gradient button</h1>
-    {Rounded(false, true)}
-    <SyntaxHighlighter language={'html'} style={darcula} showLineNumbers={true}>
-      {`${ReactDOMServer.renderToStaticMarkup(Rounded(false, true)).replace(/<\/button> /g, '<\/button>\n')}`}
-    </SyntaxHighlighter>
+    {Demo(RoundedButton(false, true))}
   </div>));
 
 storiesOf('Size', module)
