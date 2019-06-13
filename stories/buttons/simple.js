@@ -11,7 +11,8 @@ const SimpleButton = ({ outline = false, gradient = false } = {}) => {
     Button(classnames('-purple', buttonStyle), 'button<i class="fas fa-angle-right icon-right"></i>'),
     Button(classnames('-white', buttonStyle, '-loading'), 'button'),
     Button(classnames('-black', buttonStyle, '-loading'), 'button'),
-    Button(classnames('-green', buttonStyle, '-loading'), 'button')
+    Button(classnames('-green', buttonStyle, '-loading'), 'button'),
+    Button(classnames('-green', buttonStyle, '-icon'), '<i class="fas fa-align-justify"></i>')
   ]
 };
 

@@ -29,6 +29,10 @@
     padding-left: 0.45rem;
   }
 
+  &.-icon {
+    padding: $padding-vertical;
+  }
+
   .-disabled,
   &:disabled {
     background-color: $grey-lighter;

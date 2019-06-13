@@ -12,7 +12,9 @@ const RoundedButton = ({ outline = false, gradient = false } = {}) => {
     Button(classnames('-purple -rounded', buttonStyle), 'button<i class="fas fa-angle-right icon-right"></i>'),
     Button(classnames('-white -rounded', buttonStyle, '-loading'), 'button'),
     Button(classnames('-black -rounded', buttonStyle, '-loading'), 'button'),
-    Button(classnames('-green -rounded', buttonStyle, '-loading'), 'button')
+    Button(classnames('-green -rounded', buttonStyle, '-loading'), 'button'),
+    Button(classnames('-green -rounded', buttonStyle, '-icon'), '<i class="fas fa-align-justify"></i>')
+
   ]
 };
 

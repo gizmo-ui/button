@@ -12,7 +12,8 @@ const PillButton = ({ outline = false, gradient = false } = {}) => {
     Button(classnames('-purple -pill', buttonStyle), 'button<i class="fas fa-angle-right icon-right"></i>'),
     Button(classnames('-white -pill', buttonStyle, '-loading'), 'button'),
     Button(classnames('-black -pill', buttonStyle, '-loading'), 'button'),
-    Button(classnames('-green -pill', buttonStyle, '-loading'), 'button')
+    Button(classnames('-green -pill', buttonStyle, '-loading'), 'button'),
+    Button(classnames('-green -pill', buttonStyle, '-icon'), '<i class="fas fa-align-justify"></i>')
   ]
 };
 
