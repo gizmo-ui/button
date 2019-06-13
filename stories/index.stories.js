@@ -61,6 +61,7 @@ storiesOf('Button Group', module)
     {ButtonGroup(`<button class="button -blue">Button</button><button class="button -blue">Button</button><button class="button -blue">Button</button>`)
     }{ButtonGroup(`<button class="button -purple -outline">Button</button><button class="button -purple -outline">Button</button><button class="button -purple -outline">Button</button>`)}
     {ButtonGroup(`<button class="button -green -gradient">Button</button><button class="button -green -gradient">Button</button><button class="button -green -gradient">Button</button>`)}
+    {ButtonGroup(`<button class="button -green"><i class="fas fa-heart icon-left"></i>Like</button><button class="button -green -outline">234</button>`)}
     {ButtonGroup(`<button class="button -red -outline"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline"><i class="fas fa-align-center icon-left"></i>Button</button>`)}
     {ButtonGroup(`<button class="button -orange -outline">Button</button><button class="button -orange -outline">Button</button><button class="button -orange -outline">Button</button><button class="button -orange -outline">Button</button><button class="button -orange -outline">Button</button>`)}
   </div>))
@@ -68,6 +69,7 @@ storiesOf('Button Group', module)
     {ButtonGroup(`<button class="button -blue -pill">Button</button><button class="button -blue -pill">Button</button><button class="button -blue -pill">Button</button>`)
     }{ButtonGroup(`<button class="button -purple -outline -pill">Button</button><button class="button -purple -outline -pill">Button</button><button class="button -purple -outline -pill">Button</button>`)}
     {ButtonGroup(`<button class="button -green -gradient -pill">Button</button><button class="button -green -gradient -pill">Button</button><button class="button -green -gradient -pill">Button</button>`)}
+    {ButtonGroup(`<button class="button -green -pill"><i class="fas fa-heart icon-left"></i>Like</button><button class="button -green -outline -pill">234</button>`)}
     {ButtonGroup(`<button class="button -red -outline -pill"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline -pill"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline -pill"><i class="fas fa-align-center icon-left"></i>Button</button>`)}
     {ButtonGroup(`<button class="button -orange -outline -pill">Button</button><button class="button -orange -outline -pill">Button</button><button class="button -orange -outline -pill">Button</button><button class="button -orange -outline -pill">Button</button><button class="button -orange -outline -pill">Button</button>`)}
   </div>))
@@ -75,6 +77,7 @@ storiesOf('Button Group', module)
     {ButtonGroup(`<button class="button -blue -rounded">Button</button><button class="button -blue -rounded">Button</button><button class="button -blue -rounded">Button</button>`)
     }{ButtonGroup(`<button class="button -purple -outline -rounded">Button</button><button class="button -purple -outline -rounded">Button</button><button class="button -purple -outline -rounded">Button</button>`)}
     {ButtonGroup(`<button class="button -green -gradient -rounded">Button</button><button class="button -green -gradient -rounded">Button</button><button class="button -green -gradient -rounded">Button</button>`)}
+    {ButtonGroup(`<button class="button -green -rounded"><i class="fas fa-heart icon-left"></i>Like</button><button class="button -green -outline -rounded">234</button>`)}
     {ButtonGroup(`<button class="button -red -outline -rounded"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline -rounded"><i class="fas fa-align-center icon-left"></i>Button</button><button class="button -red -outline -rounded"><i class="fas fa-align-center icon-left"></i>Button</button>`)}
     {ButtonGroup(`<button class="button -orange -outline -rounded">Button</button><button class="button -orange -outline -rounded">Button</button><button class="button -orange -outline -rounded">Button</button><button class="button -orange -outline -rounded">Button</button><button class="button -orange -outline -rounded">Button</button>`)}
   </div>))
