@@ -1,7 +1,7 @@
 .button {
   -webkit-tap-highlight-color: transparent;
   background-color: $blue;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
   color: $white;
   cursor: pointer;
@@ -107,13 +107,43 @@
       content: "";
       display: block;
       height: 1em;
-      left: calc(50% - (1em / 2));
+      left: calc(50% - (1rem / 2));
       position: absolute;
-      top: calc(50% - (1em / 2));
+      top: calc(50% - (1rem / 2));
       width: 1em;
 
       @include animation("spin-around 0.5s infinite linear");
       @include border-radius(50%);
+    }
+  }
+}
+
+.grouped {
+  .button {
+    border-right-width: 0;
+
+    @include border-radius(0);
+
+    &:first-child {
+      &.-rounded {
+        @include border-left-radius(4px);
+      }
+
+      &.-pill {
+        @include border-left-radius($radius-rounded);
+      }
+    }
+
+    &:last-child {
+      &.-rounded {
+        @include border-right-radius(4px);
+      }
+
+      &.-pill {
+        @include border-right-radius($radius-rounded);
+      }
+
+      border-right-width: 1px;
     }
   }
 }
