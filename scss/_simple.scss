@@ -9,8 +9,7 @@
   font-family: $family-sans-serif;
   font-size: $mediumSize;
   line-height: 1em;
-  margin-bottom: 0.25em;
-  margin-top: 0.25em;
+  margin: 0.25em;
   min-height: 1em;
   padding: $padding-vertical $padding-horizental;
   position: relative;
@@ -124,6 +123,8 @@
 
 .grouped {
   .button {
+    margin-right: 0;
+    margin-left: 0;
     border-right-width: 0;
 
     @include border-radius(0);
